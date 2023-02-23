@@ -9,7 +9,7 @@ source /etc/network/interfaces.d/*.intf
 # The loopback network interface
 auto lo
 iface lo inet loopback
-    address 20.20.0.101/32
+    address 20.20.0.102/32
 
 # The management interface
 auto eth0
@@ -17,17 +17,17 @@ iface eth0 inet dhcp
 
 auto swp49
 iface swp49 inet static
-alias AGG1 SWP2
-    address 20.20.96.17/30
+alias AGG1 SWP3
+    address 20.20.96.21/30
 
 auto swp50
 iface swp50 inet static
-alias AGG2 SWP2
-    address 20.20.96.25/30
+alias AGG2 SWP3
+    address 20.20.96.29/30
 
 auto bond0
 iface bond0 inet static
-alias LAG to INFRA-SW2 SWP51 and SWP52
+alias LAG to INFRA-SW1 SWP51 and SWP52
     bond-slaves swp51 swp52
     bond-mode 802.3ad
       bridge-vids 100 300 400 500 600
@@ -35,31 +35,31 @@ alias LAG to INFRA-SW2 SWP51 and SWP52
 
 auto vlan100
 iface vlan100 inet static
-    address 20.1.4.2/22
+    address 20.1.4.3/22
     vlan-id 100
     vlan-raw-device bridge
 
 auto vlan300
 iface vlan300 inet static
-    address 20.2.4.2/22
+    address 20.2.4.3/22
     vlan-id 300
     vlan-raw-device bridge
 
 auto vlan400
 iface vlan400 inet static
-    address 20.3.4.2/22
+    address 20.3.4.3/22
     vlan-id 400
     vlan-raw-device bridge
 
 auto vlan500
 iface vlan500 inet static
-    address 20.4.4.2/22
+    address 20.4.4.3/22
     vlan-id 500
     vlan-raw-device bridge
 
 auto vlan600
 iface vlan600 inet static
-    address 20.5.4.2/22
+    address 20.5.4.3/22
     vlan-id 600
     vlan-raw-device bridge
 
