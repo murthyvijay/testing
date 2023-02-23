@@ -75,7 +75,7 @@
             ]
         },
         {
-            "friendlyName":"Dent disr1 accton 1G",
+            "friendlyName":"Dent dist1 accton 1G",
             "os":"dentos",
             "type" : "DISTRIBUTION_ROUTER",
             "hostName": "dist1",
@@ -96,7 +96,7 @@
             "os":"ixnetwork",
             "type" : "TRAFFIC_GENERATOR",
             "hostName": "ixia",
-            "ip": "10.36.118.xx",
+            "ip": "10.36.118.199",
             "login":{
                 "userName":"admin",
                 "password":"admin"
